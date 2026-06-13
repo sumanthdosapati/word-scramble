@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#060312">
-<title>Word Scramble Sprint — ServiceNow Community</title>
+<title>Word Scramble Game — ServiceNow Community</title>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -87,7 +87,7 @@ input{user-select:text;}
 .keyrow .w{font-weight:700;color:var(--lime);letter-spacing:1px;}
 .keyrow .h{color:var(--muted);font-size:11px;flex:1;text-align:right;padding-left:8px;}
 
-/* PLAYER SPRINT (reuses solo UI) */
+/* PLAYER Game (reuses solo UI) */
 #pPlay{justify-content:flex-start;padding-top:14px;}
 .slots{margin-top:6px;}
 .hud{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
@@ -187,10 +187,10 @@ input{user-select:text;}
 <section class="screen on" id="pJoin">
   <div class="snlogo">servicen<span class="o">o</span>w</div>
   <div class="kicker">Community Meetup</div>
-  <div class="logo">WORD<br>SCRAMBLE<br>SPRINT</div>
+  <div class="logo">WORD<br>SCRAMBLE<br>Game</div>
   <div class="field"><label>Game PIN</label><input id="pinIn" inputmode="numeric" maxlength="4" placeholder="0000"></div>
   <div class="field"><label>Your name</label><input id="nameIn" maxlength="14" placeholder="e.g. Flow Ninja"></div>
-  <button class="cta" onclick="playerJoin()">JOIN THE SPRINT</button>
+  <button class="cta" onclick="playerJoin()">JOIN THE GAME</button>
   <div class="tag" id="pJoinErr"></div>
 </section>
 
@@ -198,7 +198,7 @@ input{user-select:text;}
 <section class="screen" id="pWait">
   <div class="medal">🎮</div>
   <div class="rTitle" id="pWaitName">You're in!</div>
-  <div class="tag">Watch the big screen. The sprint starts when the host hits GO. 60 seconds, same words for everyone, fastest brain wins.</div>
+  <div class="tag">Watch the big screen. The Game starts when the host hits GO. 60 seconds, same words for everyone, fastest brain wins.</div>
 </section>
 
 <!-- PLAYER COUNTDOWN -->
@@ -206,7 +206,7 @@ input{user-select:text;}
   <div style="font-family:'Syne',sans-serif;font-size:clamp(110px,38vw,260px);font-weight:800;color:var(--volt);text-shadow:0 0 60px var(--volt);" id="pCountNum">3</div>
 </section>
 
-<!-- PLAYER SPRINT -->
+<!-- PLAYER Game -->
 <section class="screen" id="pPlay">
   <div class="hud">
     <div class="hudBox"><div class="l">Time</div><div class="v" id="pTime">60</div></div>
@@ -253,7 +253,7 @@ input{user-select:text;}
   <div class="pinbig" id="hPin">0000</div>
   <div class="joinline"><span id="hCount">0</span> players in the lobby</div>
   <div class="players" id="hPlayers"></div>
-  <button class="cta" id="hStartBtn" onclick="hostStart()" disabled>START SPRINT 🚀</button>
+  <button class="cta" id="hStartBtn" onclick="hostStart()" disabled>START Game 🚀</button>
 </section>
 
 <!-- HOST LIVE -->
